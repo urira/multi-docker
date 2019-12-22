@@ -9,3 +9,10 @@ after_sucess:
         - docker build -t urira/multi-worker ./worker
         - docker build -t urira/multi-nginx ./nginx
         - docker build -t urira/multi-server ./server
+        # Log Into Docker Hub
+        - echo "$DOCKER_PWD" | docker login "$DOCKER_ID" --password-stdin
+        # Take those images and push them to docker hub
+        - docker push urira/multi-client
+        - docker push urira/multi-worker
+        - docker push urira/multi-nginx
+        - docker push urira/multi-server
