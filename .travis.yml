@@ -4,3 +4,8 @@ before_install:
         - docker build -t urira/react-test -f ./client/Dockerfile.dev ./client
 scripts:
         - docker run  -e CI=true urira/react-test npm run test -- --coverage
+after_sucess:
+        - docker build -t urira/multi-client ./client
+        - docker build -t urira/multi-worker ./worker
+        - docker build -t urira/multi-nginx ./nginx
+        - docker build -t urira/multi-server ./server
