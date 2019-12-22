@@ -1,6 +1,6 @@
 services:
         - docker
 before_install:
-        - docker build -t urira/multi-docker -f ./client/Dockerfile.dev ./client
+        - docker build -t urira/react-test -f ./client/Dockerfile.dev ./client
 scripts:
-        - docker run  -e CI=true urira/multi-docker npm run test -- --coverage
+        - docker run  -e CI=true urira/react-test npm run test -- --coverage
