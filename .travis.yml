@@ -12,7 +12,7 @@ after_sucess:
         # Log Into Docker Hub
         - echo "$DOCKER_PWD" | docker login "$DOCKER_ID" --password-stdin
         # Take those images and push them to docker hub
-        - docker push rxxxabintex/multi-client
+        - docker push rabintex/multi-client
         - docker push rabintex/multi-worker
         - docker push rabintex/multi-nginx
         - docker push rabintex/multi-server
