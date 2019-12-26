@@ -9,7 +9,7 @@ after_sucess:
         - docker build -t rabintex/multi-worker ./worker
         - docker build -t rabintex/multi-nginx ./nginx
         - docker build -t rabintex/multi-server ./server
-        # Log Into Docker Hub new pwd
+        # Log Into Docker Hub
         - echo "$DOCKER_PWD" | docker login "$DOCKER_ID" --password-stdin
         # Take those images and push them to docker hub
         - docker push rabintex/multi-client
