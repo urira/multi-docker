@@ -6,35 +6,35 @@
             "image": "redis:latest",
             "hostname": "redis",
             "essential": true,
-            memory: 128
+            "memory": 128
         },
         {
             "name": "postgres",
             "image": "postgres:latest",
             "hostname": "postgres",
             "essential": true,
-            memory: 128
+            "memory": 128
         },
         {
             "name": "client",
             "image": "rabintex/multi-client",
             "hostname": "client",
             "essential": false,
-            memory: 128
+            "memory": 128
         },
         {
             "name": "worker",
             "image": "rabintex/multi-worker",
             "hostname": "worker",
             "essential": false,
-            memory: 128
+            "memory": 128
         },
         {
             "name": "server",
             "image": "rabintex/multi-server",
             "hostname": "api",
             "essential": false,
-            memory: 128
+            "memory": 128
         },
         {
             "name": "nginx",
@@ -51,7 +51,7 @@
                 "client",
                 "server"
             ],
-            memory: 128
+            "memory": 128
         }
     ]
 }
