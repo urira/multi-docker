@@ -2,6 +2,18 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
+            "name": "redis",
+            "image": "redis:latest",
+            "hostname": "redis",
+            "essential": true
+        },
+        {
+            "name": "postgres",
+            "image": "postgres:latest",
+            "hostname": "postgres",
+            "essential": true
+        },
+        {
             "name": "client",
             "image": "rabintex/multi-client",
             "hostname": "client",

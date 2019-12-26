@@ -17,3 +17,15 @@ after_sucess:
         #- docker push rabintex/multi-nginx
         #- docker push rabintex/multi-server
         - bash docker_push.sh
+deploy:
+        edge: true
+        provider: elasticbeanstalk
+        region: eu-west-1
+        app: multi-docker
+        env: MultiDocker-env
+        bucket_name: elasticbeanstalk-eu-west-1-742434153745
+        bueket_path: multi-docker
+        on:
+                branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_SECRET_KEY
