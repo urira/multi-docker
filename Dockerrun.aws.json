@@ -1,3 +1,23 @@
 {
-    "AWSEBDockerrunVersion": 2
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "rabintex/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "rabintex/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "rabintex/multi-server",
+            "hostname": "api",
+            "essential": false
+        }
+    ]
 }
